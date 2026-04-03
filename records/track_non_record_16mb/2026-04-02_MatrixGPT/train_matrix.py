@@ -4,7 +4,7 @@ MatrixGPT — Parameter Golf submission (non-record / unlimited compute track)
 Architecture: Matrix-State Recurrent Language Model
   O(n) in sequence length, no attention, no quadratic compute.
 
-Theory (from accompanying paper):
+Theory:
   Standard transformers compute attention as softmax(QK^T)V — O(n^2) pairwise.
   This model instead treats language as sequential composition of small dynamical
   systems. Each token is projected to k parallel 2x2 matrices M_t^(j); the model
@@ -89,7 +89,7 @@ class Hyperparameters:
     val_files = os.path.join(data_path, "fineweb_val_*.bin")
     tokenizer_path = os.environ.get("TOKENIZER_PATH", "./data/tokenizers/fineweb_1024_bpe.model")
     run_id = os.environ.get("RUN_ID", str(uuid.uuid4()))
-    seed = int(os.environ.get("SEED", 7))
+    seed = int(os.environ.get("SEED", 42))
 
     # Validation cadence.
     # val_tokens_cap: max tokens to evaluate on. 2M tokens = ~8 seconds on 3060,

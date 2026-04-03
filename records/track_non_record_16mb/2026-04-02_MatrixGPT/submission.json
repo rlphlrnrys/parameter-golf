@@ -1,6 +1,6 @@
 {
-  "name": "YOUR_NAME",
-  "github_id": "YOUR_GITHUB_ID",
+  "name": "Ralph Lauren N. Reyes",
+  "github_id": "rlphlrnrys",
   "architecture": "MatrixGPT (Matrix-State Recurrent LM)",
   "track": "non_record_16mb",
   "val_bpb_mean": 3.17277005,

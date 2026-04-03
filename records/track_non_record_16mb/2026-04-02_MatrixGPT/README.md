@@ -74,7 +74,7 @@ Wrapped with pre-RMSNorm + residual connection (same convention as baseline GPT 
 
 ### Parameter count
 
-~2.5M parameters total (much smaller than the 9.4M baseline).  
+854,272 parameters total (much smaller than the 9.4M baseline).  
 int8+zlib compressed size is well under 16 MB.
 
 ---
@@ -213,7 +213,7 @@ This submission is not intended as a SOTA record. It is submitted because:
 - **No positional encoding:** Position information is implicitly encoded via
   non-commutativity of the matrix product, but this may be weaker than RoPE for
   longer contexts.
-- **Small model:** 2.5M params vs 9.4M for baseline; some BPB gap is expected
+- **Small model:** 854,272 params vs 9.4M for baseline; some BPB gap is expected
   from capacity alone, not architecture.
 
 ---
